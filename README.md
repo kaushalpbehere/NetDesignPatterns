@@ -30,3 +30,8 @@ Implements a example in following Design Patterns.
   - [ ] Template Method
   - [ ] Visitor
 
+
+# References 
+
+- Using gitignore from : https://github.com/github/gitignore 
+
