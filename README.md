@@ -34,4 +34,5 @@ Implements a example in following Design Patterns.
 # References 
 
 - Using gitignore from : https://github.com/github/gitignore 
+- Design Patterns Theory : https://refactoring.guru/design-patterns/
 
