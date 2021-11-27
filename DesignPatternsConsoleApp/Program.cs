@@ -18,6 +18,8 @@ namespace DesignPatternsConsoleApp
         {
             FactoryExample();
             AbstractFactoryExample();
+            Console.WriteLine("Press any key to exit the program ...");
+            Console.ReadLine();
         }
 
         private static void AbstractFactoryExample()
