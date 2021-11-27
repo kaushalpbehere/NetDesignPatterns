@@ -14,12 +14,27 @@ namespace DesignPatternsConsoleApp
     /// </summary>
     public class Program
     {
+
         private static void Main()
         {
-            FactoryExample();
-            AbstractFactoryExample();
+            Console.WriteLine("Which program would you like to run? ");
+            Console.WriteLine("100: Exit, 0: Factory, 1: Abstract Factory ");
+            var message = Convert.ToInt32(Console.ReadLine());
+            switch (message)
+            {
+                case 0:
+                    FactoryExample();
+                    break;
+                case 1:
+                    AbstractFactoryExample();
+                    break;
+                case 100:
+                    Console.WriteLine("Thank you !!!");
+                    break;
+            }
+
             Console.WriteLine("Press any key to exit the program ...");
-            Console.ReadLine();
+
         }
 
         private static void AbstractFactoryExample()
