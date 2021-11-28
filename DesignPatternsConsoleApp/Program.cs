@@ -14,7 +14,6 @@ namespace DesignPatternsConsoleApp
     /// </summary>
     public class Program
     {
-
         private static void Main()
         {
             Console.WriteLine("Which program would you like to run? ");
@@ -28,15 +27,20 @@ namespace DesignPatternsConsoleApp
                 case 1:
                     AbstractFactoryExample();
                     break;
+                case 2:
+                    AbstractFactoryExample();
+                    break;
                 case 100:
                     Console.WriteLine("Thank you !!!");
                     break;
             }
 
             Console.WriteLine("Press any key to exit the program ...");
-
         }
 
+        /// <summary>
+        /// Abstract Factory Method 1.
+        /// </summary>
         private static void AbstractFactoryExample()
         {
             Console.WriteLine("Start - Calling AbstractFactory Example 1 ...");
@@ -46,6 +50,9 @@ namespace DesignPatternsConsoleApp
             Console.ReadLine();
         }
 
+        /// <summary>
+        /// Abstract Factory Method 2.
+        /// </summary>
         private static void AssignComputerToEmployee()
         {
             Console.WriteLine("Which type of Employee ? ");
@@ -58,9 +65,14 @@ namespace DesignPatternsConsoleApp
                 2 => new AppleHighEndLaptop(),
                 _ => new DellMidRangeDesktop(),
             };
-            Console.WriteLine("Brand: " + computer.Brand().GetBrand() + " Processor: " + computer.Processor().GetProcessor() + " System Type: " + computer.SystemType().GetSystemType());
+            Console.WriteLine("Brand: " + computer.Brand().GetBrand()
+                + " Processor: " + computer.Processor().GetProcessor()
+                + " System Type: " + computer.SystemType().GetSystemType());
         }
 
+        /// <summary>
+        /// Factory Method 1.
+        /// </summary>
         private static void FactoryExample()
         {
             Console.WriteLine("Start - Calling Factory Example 1 ...");
@@ -70,6 +82,9 @@ namespace DesignPatternsConsoleApp
             Console.ReadLine();
         }
 
+        /// <summary>
+        /// Factory Method 2.
+        /// </summary>
         private static void PurchaseProductsOnline()
         {
             var commodities = new Commodities();
@@ -77,11 +92,15 @@ namespace DesignPatternsConsoleApp
             Console.WriteLine("0 : Credit Card, 1: Debit Card, 2: Google Pay");
             Console.WriteLine(commodities.ProductPurchased(Convert.ToInt32(Console.ReadLine().Trim())));
             Console.WriteLine("Which commodity would you like to purchase? ");
-            Console.WriteLine("Type in the name of the commodity....");
+            Console.WriteLine("Commodities currently available: Blood, Cotton Gold, Silk...");
             var commodity = Console.ReadLine();
             Console.WriteLine(commodities.Initialize(commodity).Replace("stuff", commodity));
         }
 
+        /// <summary>
+        /// Common Method.
+        /// </summary>
+        /// <param name="calledFrom">int.</param>
         private static void DoYouWantToExit(int calledFrom)
         {
             Console.WriteLine("Do you want to continue (Y / N )? ");

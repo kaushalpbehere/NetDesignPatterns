@@ -15,6 +15,7 @@ namespace Creational.Factory.Example1
     {
         /// <summary>
         /// Initializes commodity.
+        /// This method, should have returned a Type of object initialized. As object instantiation is the important part of Factory).
         /// </summary>
         /// <param name="type">Type of commodity.</param>
         /// <returns>string.</returns>
@@ -33,6 +34,7 @@ namespace Creational.Factory.Example1
 
         /// <summary>
         /// Initiating payment.
+        /// This just return a IPayment - which can be anything, perhaps a class tomorrow.
         /// </summary>
         /// <param name="mode">Type of payment.</param>
         /// <returns>IPayment.</returns>
