@@ -3,7 +3,7 @@
 Implements a example in following Design Patterns. 
 
 - [x] Creational
-  - [x] Factory Method
+  - [x] Factory Method : **Factory Method** is a creational design pattern that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created.
   - [x] Abstract Factory
   - [x] Builder
   - [x] Prototype
