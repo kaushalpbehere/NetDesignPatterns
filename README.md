@@ -3,7 +3,8 @@
 Implements a example in following Design Patterns. 
 
 - [x] Creational
-  - [x] Factory Method : **Factory Method** is a creational design pattern that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created.
+  - [x] Factory Method : **Factory Method** is a creational design pattern that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created. ![Factory](https://user-images.githubusercontent.com/15343632/143724954-049d1d09-b46b-463e-b7e4-b148a12a9b50.png)
+    
   - [x] Abstract Factory
   - [x] Builder
   - [x] Prototype
@@ -35,4 +36,5 @@ Implements a example in following Design Patterns.
 
 - Using gitignore from : https://github.com/github/gitignore 
 - Design Patterns Theory : https://refactoring.guru/design-patterns/
+
 
