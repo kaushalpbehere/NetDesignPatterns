@@ -63,11 +63,9 @@ namespace DesignPatternsConsoleApp
             Console.WriteLine(" Incremented Counter: " + instance.GetCounter());
 
             var instance2 = Singleton.CreateInstance();
-
             Console.WriteLine(" Second Instance Counter: " + instance2.GetCounter());
             instance2.IncrementOnCall();
             Console.WriteLine(" Incremented Second Instance Counter: " + instance2.GetCounter());
-
 
             Console.WriteLine("This proves that the same object is returned on the second instance as well...");
 
