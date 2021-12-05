@@ -16,7 +16,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Creational\AbstractFactory\AbstractFactory.csproj" />
+    <ProjectReference Include="..\Creational\Builder\Builder.csproj" />
     <ProjectReference Include="..\Creational\Factory\Factory.csproj" />
+    <ProjectReference Include="..\Prototype\Prototype.csproj" />
+    <ProjectReference Include="..\Singleton\Singleton.csproj" />
   </ItemGroup>
 
 </Project>
