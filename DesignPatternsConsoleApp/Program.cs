@@ -6,6 +6,8 @@ namespace DesignPatternsConsoleApp
 {
     using System;
 
+    using Adapter;
+
     using Builder.Example1;
     using Builder.Example1.Builder;
 
@@ -24,7 +26,11 @@ namespace DesignPatternsConsoleApp
         private static void Main()
         {
             Console.WriteLine("Which program would you like to run? ");
-            Console.WriteLine("100: Exit, 0: Factory, 1: Abstract Factory, 2: Builder, 3:Prototype, 4:Singleton");
+            Console.WriteLine("100: Exit ");
+            Console.WriteLine(" === Creational Patterns === ");
+            Console.WriteLine("0: Factory, 1: Abstract Factory, 2: Builder, 3:Prototype, 4:Singleton");
+            Console.WriteLine(" === Structural Patterns === ");
+            Console.WriteLine(" 5:Adapter");
             var message = Convert.ToInt32(Console.ReadLine());
             switch (message)
             {
@@ -43,6 +49,9 @@ namespace DesignPatternsConsoleApp
                 case 4:
                     SingletonExample();
                     break;
+                case 5:
+                    AdapterExample();
+                    break;
                 case 100:
                     Console.WriteLine("Thank you !!!");
                     break;
@@ -51,6 +60,69 @@ namespace DesignPatternsConsoleApp
             Console.WriteLine("Press any key to exit the program ...");
         }
 
+        /// <summary>
+        /// An example of Adapter pattern implementation.
+        /// </summary>
+        public static void AdapterExample()
+        {
+            Console.WriteLine("Start - Calling Structural - Adapter Example 1 ...");
+            Console.WriteLine("Which type of file extension, do you want to convert from? ");
+            Console.WriteLine("0:.txt, 1:.rtf, 2:.doc, 3:.docx, 4:.xls, 5:.xlsx, 6:.pdf ");
+            var convertFrom = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Which type of file extension, do you want to convert to? ");
+            Console.WriteLine("0:.txt, 1:.rtf, 2:.doc, 3:.docx, 4:.xls, 5:.xlsx, 6:.pdf ");
+            var convertTo = Convert.ToInt32(Console.ReadLine());
+
+            var decisionMaker = new DecisionMaker();
+            Console.WriteLine(decisionMaker.StartConversion(NumberToExtention(convertFrom), NumberToExtention(convertTo)));
+
+            DoYouWantToExit(1);
+            Console.WriteLine("End - Calling Structural - Adapter Example 1 ...");
+            Console.ReadLine();
+        }
+
+        /// <summary>
+        /// Converts to integer input to string type.
+        /// </summary>
+        /// <param name="convertFrom">integer.</param>
+        /// <returns>string.</returns>
+        private static string NumberToExtention(int convertFrom)
+        {
+            var fileExtension = string.Empty;
+            switch (convertFrom)
+            {
+                default:
+                case 0:
+                    fileExtension = ".txt";
+                    break;
+                case 1:
+                    fileExtension = ".rtf";
+                    break;
+                case 2:
+                    fileExtension = ".doc";
+                    break;
+                case 3:
+                    fileExtension = ".docx";
+                    break;
+                case 4:
+                    fileExtension = ".xls";
+                    break;
+                case 5:
+                    fileExtension = ".xlsx";
+                    break;
+                case 6:
+                    fileExtension = ".pdf";
+                    break;
+            }
+
+            return fileExtension;
+        }
+
+
+        /// <summary>
+        /// An example for Singleton.
+        /// </summary>
         private static void SingletonExample()
         {
             Console.WriteLine("Start - Calling Singleton Example 1 ...");
