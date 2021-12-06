@@ -8,28 +8,13 @@ namespace Adapter
 
         public string StartConversion(string ConvertFrom, string ConvertTo)
         {
-            switch (ConvertTo)
+            convert = ConvertTo switch
             {
-                case ".pdf":
-                    convert = new PdfConverter();
-                    break;
-                case ".doc":
-                case ".docx":
-                    convert = new WordConverter();
-                    break;
-
-                case ".xls":
-                case ".xlsx":
-                    convert = new ExcelConverter();
-                    break;
-                default:
-                case ".rtf":
-                case ".txt":
-                    convert = new TextConverter();
-                    break;
-
-
-            }
+                ".pdf" => new PdfConverter(),
+                ".doc" or ".docx" => new WordConverter(),
+                ".xls" or ".xlsx" => new ExcelConverter(),
+                _ => new TextConverter(),
+            };
             return convert.Convert(ConvertFrom);
         }
     }

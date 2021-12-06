@@ -38,34 +38,17 @@
         private static string NumberToExtention(int convertFrom)
         {
             var fileExtension = string.Empty;
-            switch (convertFrom)
+            fileExtension = convertFrom switch
             {
-                default:
-                case 0:
-                    fileExtension = ".txt";
-                    break;
-                case 1:
-                    fileExtension = ".rtf";
-                    break;
-                case 2:
-                    fileExtension = ".doc";
-                    break;
-                case 3:
-                    fileExtension = ".docx";
-                    break;
-                case 4:
-                    fileExtension = ".xls";
-                    break;
-                case 5:
-                    fileExtension = ".xlsx";
-                    break;
-                case 6:
-                    fileExtension = ".pdf";
-                    break;
-            }
-
+                1 => ".rtf",
+                2 => ".doc",
+                3 => ".docx",
+                4 => ".xls",
+                5 => ".xlsx",
+                6 => ".pdf",
+                _ => ".txt",
+            };
             return fileExtension;
         }
-
     }
 }
