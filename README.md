@@ -27,7 +27,11 @@ Implements a example in following Design Patterns.
 
 
 - [ ] Structural 
-  - [ ] Adapter
+  - [x] Adapter : Adapter is a structural design pattern that allows objects with incompatible interfaces to collaborate. (An example to remember is various types of file convertors, and each convertor can have different type of conversion internally. )
+
+![Adapter](https://user-images.githubusercontent.com/15343632/144773098-d0ea6eda-ebe9-491d-bee1-939a74c02617.png)
+
+
   - [ ] Bridge
   - [ ] Composite
   - [ ] Decoratoor
@@ -52,6 +56,8 @@ Implements a example in following Design Patterns.
 
 - Using gitignore from : https://github.com/github/gitignore 
 - Design Patterns Theory : https://refactoring.guru/design-patterns/
+- Simpler language for design patterns : https://www.dofactory.com/net/design-patterns
+- Adapter Pattern - https://www.geeksforgeeks.org/adapter-pattern/
 
 
 
