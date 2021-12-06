@@ -1,9 +1,9 @@
-﻿using Adapter;
-
-using System;
-
-namespace DesignPatternsConsoleApp
+﻿namespace DesignPatternsConsoleApp
 {
+    using System;
+
+    using Adapter;
+
     /// <summary>
     /// This class implements all structural design patterns.
     /// </summary>
