@@ -1,5 +1,12 @@
-﻿namespace Builder.Example1.Builder
+﻿// <copyright file="FancyGlassHouse.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace Builder.Example1.Builder
 {
+    /// <summary>
+    /// A Fancy Glass House.
+    /// </summary>
     public class FancyGlassHouse : IHouseBuilder
     {
         private readonly House house = new();
@@ -9,7 +16,7 @@
         /// </summary>
         public void BuildAdditionalSystems()
         {
-            house.Add("Building Additional Systems... such as heating, extra insulation, ventilation etc...");
+            this.house.Add("Building Additional Systems... such as heating, extra insulation, ventilation etc...");
         }
 
         /// <summary>
@@ -17,7 +24,7 @@
         /// </summary>
         public void BuildBasicInfrastructure()
         {
-            house.Add("Building Fancy Infrastructure...");
+            this.house.Add("Building Fancy Infrastructure...");
         }
 
         /// <summary>
@@ -25,7 +32,7 @@
         /// </summary>
         public void BuildFoundation()
         {
-            house.Add("Building Fancy Foundation ...");
+            this.house.Add("Building Fancy Foundation ...");
         }
 
         /// <summary>
@@ -34,7 +41,7 @@
         /// <returns> Fancy House.</returns>
         public House GetFinalOutcome()
         {
-            return house;
+            return this.house;
         }
     }
 }

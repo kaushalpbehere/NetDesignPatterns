@@ -1,4 +1,8 @@
-﻿namespace DesignPatternsConsoleApp
+﻿// <copyright file="ObjectCreation.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace DesignPatternsConsoleApp
 {
     using System;
 

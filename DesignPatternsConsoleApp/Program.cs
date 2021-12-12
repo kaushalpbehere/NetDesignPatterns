@@ -6,8 +6,6 @@ namespace DesignPatternsConsoleApp
 {
     using System;
 
-    using Adapter;
-
     /// <summary>
     /// The start of the DesignPatterns.
     /// </summary>

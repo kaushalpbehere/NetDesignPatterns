@@ -1,4 +1,8 @@
-﻿namespace Adapter.Converters
+﻿// <copyright file="ExcelConverter.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace Adapter.Converters
 {
     internal class ExcelConverter : IConvert
     {

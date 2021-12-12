@@ -1,5 +1,12 @@
-﻿namespace Singleton
+﻿// <copyright file="Singleton.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace Singleton
 {
+    /// <summary>
+    /// To instantiate and use Singleton example.
+    /// </summary>
     public class Singleton
     {
         /// <summary>
@@ -8,35 +15,39 @@
         private static Singleton instance;
 
         /// <summary>
-        /// Constructor made private. To stop new object creations from outside world.
+        /// A counter to check the number of times this class is initialized adn called.
+        /// </summary>
+        private int counter;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Singleton"/> class.
+        /// This initialize or retrieves the singleton object.
         /// </summary>
         private Singleton()
         {
-            this.Counter = 1;
+            this.counter = 1;
         }
 
         /// <summary>
         /// A static method to create instance of an object.
         /// </summary>
-        /// <param name="instance"></param>
-        /// <returns></returns>
+        /// <returns>Singleton type object.</returns>
         public static Singleton CreateInstance()
         {
-            if (Singleton.instance == null) Singleton.instance = new Singleton();
-            return Singleton.instance;
-        }
+            if (instance == null)
+            {
+                instance = new Singleton();
+            }
 
-        /// <summary>
-        /// A counter to check the number of times this class is initialized adn called.
-        /// </summary>
-        private int Counter;
+            return instance;
+        }
 
         /// <summary>
         /// To call this method is to increment the counter.
         /// </summary>
         public void IncrementOnCall()
         {
-            this.Counter++;
+            this.counter++;
         }
 
         /// <summary>
@@ -45,7 +56,7 @@
         /// <returns>int.</returns>
         public int GetCounter()
         {
-            return this.Counter;
+            return this.counter;
         }
     }
 }

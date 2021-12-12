@@ -1,4 +1,8 @@
-﻿namespace Prototype
+﻿// <copyright file="Class1.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace Prototype
 {
     public class Class1
     {

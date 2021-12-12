@@ -1,4 +1,8 @@
-﻿namespace DesignPatternsConsoleApp
+﻿// <copyright file="Structural.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace DesignPatternsConsoleApp
 {
     using System;
 
@@ -37,8 +41,7 @@
         /// <returns>string.</returns>
         private static string NumberToExtention(int convertFrom)
         {
-            var fileExtension = string.Empty;
-            fileExtension = convertFrom switch
+            return convertFrom switch
             {
                 1 => ".rtf",
                 2 => ".doc",
@@ -48,7 +51,6 @@
                 6 => ".pdf",
                 _ => ".txt",
             };
-            return fileExtension;
         }
     }
 }

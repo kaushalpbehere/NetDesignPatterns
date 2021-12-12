@@ -1,5 +1,12 @@
-﻿namespace Builder.Example1.Builder
+﻿// <copyright file="SimpleHouse.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace Builder.Example1.Builder
 {
+    /// <summary>
+    /// A Simple House.
+    /// </summary>
     public class SimpleHouse : IHouseBuilder
     {
         private readonly House house = new();
@@ -9,7 +16,7 @@
         /// </summary>
         public void BuildAdditionalSystems()
         {
-            house.Add("Building Basic Additional Systems...");
+            this.house.Add("Building Basic Additional Systems...");
         }
 
         /// <summary>
@@ -17,7 +24,7 @@
         /// </summary>
         public void BuildBasicInfrastructure()
         {
-            house.Add("Building Basic Infrastructure...");
+            this.house.Add("Building Basic Infrastructure...");
         }
 
         /// <summary>
@@ -25,16 +32,16 @@
         /// </summary>
         public void BuildFoundation()
         {
-            house.Add("Building Foundation ...");
+            this.house.Add("Building Foundation ...");
         }
 
         /// <summary>
         /// Builds a simple house as final output.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>A Simple House.</returns>
         public House GetFinalOutcome()
         {
-            return house;
+            return this.house;
         }
     }
 }
