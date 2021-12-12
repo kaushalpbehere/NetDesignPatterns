@@ -11,7 +11,7 @@ Implements a example in following Design Patterns.
 
 - [ ] Structural
   - [x] Adapter : Adapter is a structural design pattern that allows objects with incompatible interfaces to collaborate. (An example to remember is various types of file convertors, and each convertor can have different type of conversion internally. ) ![Adapter](https://user-images.githubusercontent.com/15343632/144773098-d0ea6eda-ebe9-491d-bee1-939a74c02617.png)
-  - [ ] Bridge
+  - [x] Bridge : Bridge is a structural design pattern that lets you split a large class or a set of closely related classes into two separate hierarchies—abstraction and implementation—which can be developed independently of each other. ![Bridge](https://user-images.githubusercontent.com/15343632/145727803-2fb55b99-d5da-4212-8c87-6951c37f655c.png)
   - [ ] Composite
   - [ ] Decoratoor
   - [ ] Facade
